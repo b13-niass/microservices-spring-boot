@@ -14,19 +14,19 @@ public class CustomerServiceApplication {
         SpringApplication.run(CustomerServiceApplication.class, args);
     }
 
-    @Bean
-    CommandLineRunner commandLineRunner(CustomerRepository customerRepository){
-        return args -> {
-            customerRepository.save(Customer.builder()
-                    .firstName("Mouhamad")
-                    .lastName("Elhannaoui")
-                    .email("mouhamad.cisse@example.com")
-                    .build());
-            customerRepository.save(Customer.builder()
-                    .firstName("Hassan")
-                    .lastName("Cisse")
-                    .email("hassan.cisse@example.com")
-                    .build());
-        };
-    }
+//    @Bean
+//    CommandLineRunner commandLineRunner(CustomerRepository customerRepository){
+//        return args -> {
+//            customerRepository.save(Customer.builder()
+//                    .firstName("Mouhamad")
+//                    .lastName("Elhannaoui")
+//                    .email("mouhamad.cisse@example.com")
+//                    .build());
+//            customerRepository.save(Customer.builder()
+//                    .firstName("Hassan")
+//                    .lastName("Cisse")
+//                    .email("hassan.cisse@example.com")
+//                    .build());
+//        };
+//    }
 }

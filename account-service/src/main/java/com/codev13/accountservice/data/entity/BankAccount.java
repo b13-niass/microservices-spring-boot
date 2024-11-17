@@ -2,24 +2,20 @@ package com.codev13.accountservice.data.entity;
 
 import com.codev13.accountservice.data.model.Customer;
 import com.codev13.accountservice.enums.AccountType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Transient;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import jakarta.persistence.*;
+import lombok.*;
 
 import java.time.LocalDate;
 
-@Getter @Setter @ToString
+@Getter @Setter @ToString @Builder @AllArgsConstructor @NoArgsConstructor
 @Entity
 public class BankAccount {
     @Id
     private String accountId;
-    private  Double solde;
+    private  double balance;
     private LocalDate createdAt;
     private String currency;
+    @Enumerated(EnumType.STRING)
     private AccountType type;
     @Transient
     private Customer customer;
